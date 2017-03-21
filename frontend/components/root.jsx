@@ -14,7 +14,7 @@ const Root = ({ store }) => {
   const _ensureLoggedOut = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/expenses')
+      replace('/home')
     }
   }
 
