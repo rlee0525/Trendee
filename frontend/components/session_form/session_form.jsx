@@ -174,12 +174,12 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-box">
-        <div className="login-box-instruction">
-          <h1>Trendee</h1>
-          <div className="divide-line"></div>
-          <p>Set and discover the trend.</p>
-        </div>
         <form className="login-box-inputs">
+          <div className="intro-text">
+            <h1>Trendee</h1>
+            <div className="divide-line"></div>
+          </div>
+
           <div className="errors-container">
             {this.props.errors && this.renderErrors()}
           </div>
