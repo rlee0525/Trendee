@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
       };
 
       this.props.login(user)
-          .then(() => hashHistory.replace("/suggestions"))
+          .then(() => hashHistory.replace("/home"))
           .fail((error) => console.log(error));
     } else {
       const user = {
@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
       };
 
       this.props.signup(user)
-          .then(() => hashHistory.replace("/suggestions"))
+          .then(() => hashHistory.replace("/home"))
           .fail((error) => console.log(error));
     }
   }
@@ -105,7 +105,7 @@ class SessionForm extends React.Component {
         return that.props.login({
           username: that.state.username,
           password: that.state.password
-        }).then(() => hashHistory.replace("/suggestions"));
+        }).then(() => hashHistory.replace("/home"));
       }
 
       setTimeout(() => {
@@ -176,7 +176,7 @@ class SessionForm extends React.Component {
       <div className="login-box">
         <form className="login-box-inputs">
           <div className="intro-text">
-            <h1>Trend<img id="login-logo" 
+            <h1>Trend<img id="login-logo"
                           src="http://res.cloudinary.com/rlee0525/image/upload/v1490145963/Logomakr_2u6XfB_nj7a1l.png"/>
             </h1>
             <div className="divide-line"></div>
