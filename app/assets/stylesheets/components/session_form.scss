@@ -3,42 +3,11 @@
   position: absolute;
   width: 370px;
   height: 440px;
-  top: calc(50% - 220px);
-  left: calc(50% - 185px);
+  top: 8vh;
+  right: 5vw;
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
-  //
-  // .login-box-instruction {
-  //   display: flex;
-  //   box-sizing: border-box;
-  //   width: 42%;
-  //   padding: 20px;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   background-color: $pink;
-  //   border-top-left-radius: 5px;
-  //   border-bottom-left-radius: 5px;
-  //   box-sizing: border-box;
-  //
-  //   h1 {
-  //     font-size: 30px;
-  //     color: white;
-  //   }
-  //
-    // .divide-line {
-    //   width: 50px;
-    //   border-bottom: 5px solid white;
-    //   padding: 10px 0 10px 0;
-    // }
-  //
-  //   p {
-  //     margin-top: 20px;
-  //     font-size: 13px;
-  //     line-height: 1.5em;
-  //     color: white;
-  //   }
-  // }
 
   .login-box-inputs {
     display: flex;
@@ -127,7 +96,7 @@
       }
 
       #sign-up-log-in-button:hover, #demo-button:hover {
-        background-color: $pink;
+        opacity: 0.9;
         cursor: pointer;
       }
     }

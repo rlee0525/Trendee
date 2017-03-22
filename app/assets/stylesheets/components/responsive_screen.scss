@@ -1,0 +1,10 @@
+@media screen and (max-width: 1120px) {
+  #splash-img {
+    display: none !important;
+  }
+
+  .login-box {
+    top: calc(50% - 220px) !important;
+    left: calc(50% - 185px) !important;
+  }
+}
