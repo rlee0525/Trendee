@@ -1,0 +1,50 @@
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+.featured-div, .hottest-div, .booked-div {
+  margin-bottom: 40px;
+}
+
+.featured-title, .hottest-title, .booked-title {
+  font-size: 18px;
+  color: $foggy;
+  margin-bottom: 25px;
+}
+
+.featured-slider, .hottest-slider, .booked-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.slick-slide {
+  box-sizing: border-box;
+  width: 250px;
+  height: 400px;
+  padding-left: 15px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  color: $foggy;
+  z-index: 1;
+  top: calc(50% - 15px);
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}

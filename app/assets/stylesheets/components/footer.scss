@@ -1,0 +1,85 @@
+.footer {
+  padding: 30px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 60px 22vw;
+  border-top: 1px solid $light-gray;
+}
+
+.footer-vertical-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-vertical-menu > span {
+  font-weight: 400;
+  font-size: 16px;
+  color: $foggy;
+  border: 1px solid $light-gray;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+#fa-chevron-down {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.menu-header-footer {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: $foggy;
+}
+
+.footer-vertical-menu > ul > li {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 14px;
+  color: $foggy;
+  line-height: 1.5em;
+}
+
+.footer-vertical-menu > ul > li:hover {
+  color: $pink;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 10px;
+  border-top: 1px solid $light-gray;
+  margin: 0 22vw;
+}
+
+#footer-logo {
+  color: $foggy;
+  -webkit-font-smoothing: antialiased;
+}
+
+#footer-logo > img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.icons > a {
+  color: $foggy;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.icons > a:hover {
+  cursor: pointer;
+  color: $teal;
+}
