@@ -14,7 +14,7 @@ class MainNavBar extends React.Component {
 
   render() {
     return (
-      <div className="main_navbar_container">
+      <div className="main-navbar-container">
         <div className="nav-left">
           <Link to="/home">
             <img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/v1490145963/Logomakr_2u6XfB_nj7a1l.png"/>

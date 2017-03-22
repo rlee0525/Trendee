@@ -23,7 +23,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } onEnter={_ensureLoggedOut} />
-        <Route path="home" component={ HomeContainer } onEnter={_ensureLoggedIn} />
+        <Route path="/home" component={ HomeContainer } onEnter={_ensureLoggedIn} />
       </Router>
     </Provider>
   );
