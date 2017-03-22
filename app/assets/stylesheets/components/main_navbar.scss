@@ -1,0 +1,64 @@
+.main_navbar_container {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+
+  .nav-left, .nav-discover, .nav-set, .nav-right {
+    display: flex;
+    flex-direction: row;
+
+    img#logo {
+      height: 28px;
+      padding: 0 24px;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        padding: 10px 0;
+        font-size: 15px;
+      }
+
+      li:hover {
+        cursor: pointer;
+        border-bottom: 3px solid $teal;
+        padding-top: 13px;
+      }
+    }
+  }
+
+  .nav-discover, .nav-set {
+
+    .active {
+      border-bottom: 3px solid $pink;
+      padding-top: 13px;
+    }
+
+    .active2 {
+      border-bottom: 3px solid $teal;
+      padding-top: 13px;
+    }
+  }
+
+  .nav-right {
+    padding-right: 24px;
+
+    img#profile-pic {
+      width: 30px;
+      padding: 2px 20px 0 10px;
+    }
+
+    img#profile-pic:hover {
+      cursor: pointer;
+    }
+  }
+}
