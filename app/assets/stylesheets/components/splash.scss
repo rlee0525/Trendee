@@ -2,3 +2,14 @@
   width: 90vw;
   height: 100vh;
 }
+
+#splash-logo {
+  position: absolute;
+  top: 11vh;
+  left: 6vw;
+  font-size: 50px;
+}
+
+#splash-title {
+  color: $teal;
+}
