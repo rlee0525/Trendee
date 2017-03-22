@@ -176,7 +176,9 @@ class SessionForm extends React.Component {
       <div className="login-box">
         <form className="login-box-inputs">
           <div className="intro-text">
-            <h1>Trendee</h1>
+            <h1>Trend<img id="login-logo" 
+                          src="http://res.cloudinary.com/rlee0525/image/upload/v1490145963/Logomakr_2u6XfB_nj7a1l.png"/>
+            </h1>
             <div className="divide-line"></div>
           </div>
 
