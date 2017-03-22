@@ -1,8 +1,9 @@
 import React from 'react';
+import Splash from './splash/splash';
 
 const App = ({ children }) => (
   <div>
-    <h1>Hello!</h1>
+    <Splash />
     { children }
   </div>
 );
