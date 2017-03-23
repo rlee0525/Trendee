@@ -6,10 +6,30 @@ class MainSearch extends React.Component {
     super(props);
 
     this.state = {
-      category: "",
-      post: "",
-      user: "",
+      category: "All",
+      subcategory: "All",
+      post: "All",
+      user: "All",
     }
+  }
+
+  displayCategory() {
+    let list = [
+                "Arts / Entertainment / Reviews",
+                "Travel / Leisure",
+                "Cooking / Food / Drink",
+                "Photos / Essays / Nature",
+                "Technology / Cars",
+                "Sports",
+                "Politics / News",
+                "Daily / Child / Education",
+                "Fashion / Beauty / Interior Design"
+              ];
+    return (
+      <div>
+        Hi
+      </div>
+    )
   }
 
   render() {
@@ -46,7 +66,7 @@ class MainSearch extends React.Component {
             </div>
             <div className="search-input">
               <input type="text"
-                placeholder="Anything"
+                placeholder="All"
                 className="search-bar" />
             </div>
 
