@@ -21,20 +21,10 @@ class MainNavBar extends React.Component {
           </Link>
         </div>
 
-        <div className="nav-discover">
-          <ul>
-            <li className={this.props.location.pathname==="/home" ? "active" : ""}>Discover</li>
-          </ul>
-        </div>
-
-        <div className="nav-set">
-          <ul>
-            <li className={this.props.location.pathname==="/post" ? "active" : ""}>Set</li>
-          </ul>
-        </div>
-
         <div className="nav-right">
           <ul>
+            <li className={this.props.location.pathname==="/post" ? "active" : ""}>Set</li>
+            <li className={this.props.location.pathname==="/home" ? "active" : ""}>Discover</li>
             <li onClick={this.signOut}>Sign out</li>
           </ul>
         </div>

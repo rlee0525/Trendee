@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   border-bottom: 1px solid #ddd;
 
-  .nav-left, .nav-discover, .nav-set, .nav-right {
+  .nav-left, .nav-right {
     display: flex;
     flex-direction: row;
 
@@ -21,15 +21,23 @@
       padding: 0 24px;
     }
 
+    .active {
+      border-bottom: 3px solid $pink;
+      margin-top: 16px;
+      padding-top: 13px;
+      padding-bottom: 22px;
+    }
+
     ul {
       display: flex;
 
       li {
         font-size: 15px;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         margin-top: 16px;
         padding-top: 13px;
         padding-bottom: 24px;
+        margin-right: 35px;
       }
 
       li:hover {
@@ -42,18 +50,8 @@
     }
   }
 
-  .nav-discover, .nav-set {
-
-    .active {
-      border-bottom: 3px solid $pink;
-      margin-top: 16px;
-      padding-top: 13px;
-      padding-bottom: 22px;
-    }
-  }
-
   .nav-right {
-    padding-right: 24px;
+    padding-right: 15px;
 
     img#profile-pic {
       width: 30px;

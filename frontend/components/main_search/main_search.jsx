@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import Categories from './categories';
 
 class MainSearch extends React.Component {
   constructor(props) {
@@ -10,26 +11,24 @@ class MainSearch extends React.Component {
       subcategory: "All",
       post: "All",
       user: "All",
+      searchCategories: false,
     }
+
+    this.handleCategories = this.handleCategories.bind(this);
   }
 
-  displayCategory() {
-    let list = [
-                "Arts / Entertainment / Reviews",
-                "Travel / Leisure",
-                "Cooking / Food / Drink",
-                "Photos / Essays / Nature",
-                "Technology / Cars",
-                "Sports",
-                "Politics / News",
-                "Daily / Child / Education",
-                "Fashion / Beauty / Interior Design"
-              ];
-    return (
-      <div>
-        Hi
-      </div>
-    )
+  update(property) {
+    return e => this.setState({
+      [property]: e.currentTarget.value
+    });
+  }
+
+  handleCategories() {
+    let searchCategories = !this.state.searchCategories;
+
+    this.setState({
+      searchCategories
+    });
   }
 
   render() {
@@ -45,8 +44,10 @@ class MainSearch extends React.Component {
             <div className="search-input">
               <input type="text"
                 placeholder="All"
-                className="search-bar" />
+                className="search-bar"
+                onClick={this.handleCategories} />
             </div>
+            {this.state.searchCategories && <Categories />}
           </div>
 
           <div className="search-container">
@@ -55,7 +56,8 @@ class MainSearch extends React.Component {
               <div className="search-input">
                 <input type="text"
                   placeholder="All"
-                  className="search-bar" />
+                  className="search-bar"
+                  onChange={this.update('post')} />
               </div>
             </div>
           </div>
@@ -67,7 +69,8 @@ class MainSearch extends React.Component {
             <div className="search-input">
               <input type="text"
                 placeholder="All"
-                className="search-bar" />
+                className="search-bar"
+                onChange={this.update('user')} />
             </div>
 
             <div className="search-button">

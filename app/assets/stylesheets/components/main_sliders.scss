@@ -5,6 +5,7 @@
 
 .featured-div, .category-one-div, .category-two-div,
 .category-three-div, .keeped-posts-div, .keeped-users-div {
+  margin: 0 3px;
   margin-bottom: 40px;
 }
 
@@ -26,7 +27,8 @@
   box-sizing: border-box;
   width: 150px;
   height: 400px;
-  padding-left: 15px;
+  padding-left: 25px;
+  margin-left: -2px;
 }
 
 .slider-container {
