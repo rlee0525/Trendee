@@ -5,6 +5,26 @@ class User < ApplicationRecord
   validates :username, :email, uniqueness: true
   validates :username, :password, length: { minimum: 8, allow_nil: true }
 
+  has_many :follower_associations,
+  foreign_key: :following_id,
+  class_name: "Follow",
+  dependent: :destroy
+
+  has_many :followers,
+  through: :follower_associations,
+  source: :follower,
+  dependent: :destroy
+
+  has_many :following_associations,
+  foreign_key: :follower_id,
+  class_name: "Follow",
+  dependent: :destroy
+
+  has_many :followings,
+  through: :following_associations,
+  source: :following,
+  dependent: :destroy
+
   attr_reader :password
 
   after_initialize :ensure_session_token
