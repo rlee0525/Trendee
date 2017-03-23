@@ -18,6 +18,8 @@ class Categories extends React.Component {
                   },
       categoriesSelected: ""
     };
+
+    this.displaySubCategories = this.displaySubCategories.bind(this);
   }
 
   update(property, category) {
@@ -26,21 +28,31 @@ class Categories extends React.Component {
     });
   }
 
-  render() {
+  displaySubCategories() {
     let categories = this.state.categories;
-    let categoriesList = Object.keys(this.state.categories);
-    let category = this.state.categoriesSelected;
+    let categorySelected = this.state.categoriesSelected;
     let subCategories = categories[this.state.categoriesSelected];
-
     let subcategoriesDropDown;
 
-    if (category) {
+    if (categorySelected) {
       subcategoriesDropDown = subCategories.map(subcategory => (
         <li>
           {subcategory}
         </li>
       ))
     }
+
+    return (
+      <div className="subcategories-list-dropdown">
+        <ul>
+          {subcategoriesDropDown}
+        </ul>
+      </div>
+    )
+  }
+
+  render() {
+    let categoriesList = Object.keys(this.state.categories);
 
     let categoriesDropDown = categoriesList.map(category => (
       <li onMouseOver={this.update("categoriesSelected", category)}>
@@ -55,11 +67,7 @@ class Categories extends React.Component {
             {categoriesDropDown}
           </ul>
         </div>
-        <div className="subcategories-list-dropdown">
-          <ul>
-            {subcategoriesDropDown}
-          </ul>
-        </div>
+        {this.displaySubCategories()}
       </div>
     )
   }
