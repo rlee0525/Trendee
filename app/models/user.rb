@@ -25,6 +25,8 @@ class User < ApplicationRecord
   source: :following,
   dependent: :destroy
 
+  has_many :posts
+
   attr_reader :password
 
   after_initialize :ensure_session_token
