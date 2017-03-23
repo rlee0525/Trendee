@@ -68,19 +68,19 @@ class FeaturedSlider extends React.Component {
     };
 
     return (
-      <div className="booked-div">
-        <div className="booked-title">
-          Just booked
+      <div className="featured-div">
+        <div className="featured-title">
+          Featured
         </div>
-        <div className="booked-slider">
+        <div className="featured-slider">
           <Slider className="slider-container" {...settings}>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/5_zrkwbs.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/7_afgeh3.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/9_br0xy6.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/6_o8ndem.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/1_bhjdiy.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
           </Slider>

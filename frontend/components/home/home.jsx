@@ -19,12 +19,12 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <MainNavBar />
-        
+
         <div className="home-main-container">
           <MainSearch />
 
-          <div className="splash-body">
-            <div className="splash-main">
+          <div className="slider-body">
+            <div className="slider-main">
               <FeaturedSlider />
               <KeepedUsersSlider />
               <CategoryOneSlider />

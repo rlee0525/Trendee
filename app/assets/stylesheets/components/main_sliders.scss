@@ -3,17 +3,20 @@
   min-width: 0;
 }
 
-.featured-div, .hottest-div, .booked-div {
+.featured-div, .category-one-div, .category-two-div,
+.category-three-div, .keeped-posts-div, .keeped-users-div {
   margin-bottom: 40px;
 }
 
-.featured-title, .hottest-title, .booked-title {
+.featured-title, .category-one-title, .category-two-title,
+.category-three-title, .keeped-posts-title, .keeped-users-title {
   font-size: 18px;
   color: $foggy;
   margin-bottom: 25px;
 }
 
-.featured-slider, .hottest-slider, .booked-slider {
+.featured-slider, .category-one-slider, .category-two-slider,
+.category-three-slider, .keeped-posts-slider, .keeped-users-slider {
   display: flex;
   flex-direction: column;
   position: relative;

@@ -68,21 +68,21 @@ class CategoryOneSlider extends React.Component {
     };
 
     return (
-      <div className="booked-div">
-        <div className="booked-title">
-          Just booked
+      <div className="category-one-div">
+        <div className="category-one-title">
+          Category One
         </div>
-        <div className="booked-slider">
+        <div className="category-one-slider">
           <Slider className="slider-container" {...settings}>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/7_afgeh3.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/8_apgnhx.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/3_abguqq.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/2_nhrebe.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/2_nhrebe.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/1_bhjdiy.jpg"/>
           </Slider>
         </div>
       </div>
