@@ -1,4 +1,4 @@
-import PostsSearch from './main_search';
+import PostsSearch from './posts_search';
 import { connect } from 'react-redux';
 import { searchPosts } from '../../actions/posts_actions';
 import _ from 'lodash';
