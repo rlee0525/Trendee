@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Categories extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       categories: {
@@ -14,7 +14,7 @@ class Categories extends React.Component {
                     "Sports": ["Football", "Baseball", "Basketball", "Ice Hockey", "Soccer", "Tennis", "Golf", "Others"],
                     "Politics / News": ["Politics", "Economics", "News"],
                     "Daily / Child / Education": ["Daily", "Pets", "Education", "Foreign Language"],
-                    "Fashion / Beauty / Interior Design": ["Interior Design", "Fashion", "Beauty"]
+                    "Fashion / Beauty / Interior Design": ["Interior Design", "DIY", "Fashion", "Beauty"]
                   },
       categoriesSelected: ""
     };
@@ -36,7 +36,8 @@ class Categories extends React.Component {
 
     if (categorySelected) {
       subcategoriesDropDown = subCategories.map(subcategory => (
-        <li>
+        <li key={Math.random()}
+            onClick={() => {this.props.handleClickCategory(subcategory); this.props.handleClickOutside();}}>
           {subcategory}
         </li>
       ))
@@ -55,7 +56,7 @@ class Categories extends React.Component {
     let categoriesList = Object.keys(this.state.categories);
 
     let categoriesDropDown = categoriesList.map(category => (
-      <li onMouseOver={this.update("categoriesSelected", category)}>
+      <li key={category} onMouseOver={this.update("categoriesSelected", category)}>
         {category}
       </li>
     ));

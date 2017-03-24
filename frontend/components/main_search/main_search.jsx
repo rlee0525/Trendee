@@ -16,6 +16,14 @@ class MainSearch extends React.Component {
     }
 
     this.handleCategories = this.handleCategories.bind(this);
+    this.handleClickCategory = this.handleClickCategory.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  handleClickCategory(subcategory) {
+    this.setState({
+      subcategory
+    });
   }
 
   handleClickOutside() {
@@ -47,12 +55,13 @@ class MainSearch extends React.Component {
               <p>Category</p>
             </div>
             <div className="search-input">
-              <input type="text"
-                placeholder="All"
-                className="search-bar"
-                onClick={this.handleCategories} />
+              <p className="search-bar" onClick={this.handleCategories}>
+                {this.state.subcategory}
+              </p>
             </div>
-            {this.state.isOpened && <Categories />}
+            {this.state.isOpened &&
+              <Categories handleClickCategory={this.handleClickCategory}
+                          handleClickOutside={this.handleClickOutside} />}
           </div>
 
           <div className="search-container">
