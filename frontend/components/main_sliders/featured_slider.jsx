@@ -77,7 +77,7 @@ class FeaturedSlider extends React.Component {
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/1_bhjdiy.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/5_zrkwbs.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/7_afgeh3.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/9_br0xy6.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/3_abguqq.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/6_o8ndem.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>

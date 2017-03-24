@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import enhanceWithClickOutside from 'react-click-outside';
 import Categories from './categories';
 
 class MainSearch extends React.Component {
@@ -11,10 +12,14 @@ class MainSearch extends React.Component {
       subcategory: "All",
       post: "All",
       user: "All",
-      searchCategories: false,
+      isOpened: false,
     }
 
     this.handleCategories = this.handleCategories.bind(this);
+  }
+
+  handleClickOutside() {
+    this.setState({ isOpened: false });
   }
 
   update(property) {
@@ -24,10 +29,10 @@ class MainSearch extends React.Component {
   }
 
   handleCategories() {
-    let searchCategories = !this.state.searchCategories;
+    let isOpened = !this.state.isOpened;
 
     this.setState({
-      searchCategories
+      isOpened
     });
   }
 
@@ -47,7 +52,7 @@ class MainSearch extends React.Component {
                 className="search-bar"
                 onClick={this.handleCategories} />
             </div>
-            {this.state.searchCategories && <Categories />}
+            {this.state.isOpened && <Categories />}
           </div>
 
           <div className="search-container">
@@ -83,4 +88,4 @@ class MainSearch extends React.Component {
   }
 }
 
-export default withRouter(MainSearch);
+export default enhanceWithClickOutside(MainSearch);

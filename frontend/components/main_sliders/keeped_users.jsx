@@ -77,9 +77,9 @@ class KeepedUsersSlider extends React.Component {
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/8_apgnhx.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/3_abguqq.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/1_bhjdiy.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/9_br0xy6.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/1_bhjdiy.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227509/9_br0xy6.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490227510/6_o8ndem.jpg"/>
