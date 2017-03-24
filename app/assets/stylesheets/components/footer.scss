@@ -66,11 +66,11 @@
 #footer-logo {
   color: $foggy;
   -webkit-font-smoothing: antialiased;
-}
 
-#footer-logo > img {
-  width: 25px;
-  margin-right: 10px;
+  img {
+    width: 25px;
+    margin-right: 10px;
+  }
 }
 
 .icons > a {

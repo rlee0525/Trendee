@@ -47,7 +47,7 @@ class Footer extends React.Component {
           </div>
           <div className="footer-links">
             <div id="footer-logo">
-              <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489572316/Logomakr_87zUI0_rtvjck.png" />© Trendee, Inc.
+              <img src="http://res.cloudinary.com/rlee0525/image/upload/v1490383964/logo4_feruh4.png" />© Trendee, Inc.
             </div>
             <div>
               <div className="icons">
