@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import HomeContainer from './home/home_container';
+import PostsSearchContainer from './posts_search/posts_search_container';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -24,6 +25,7 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } onEnter={_ensureLoggedOut} />
         <Route path="/home" component={ HomeContainer } onEnter={_ensureLoggedIn} />
+        <Route path="/search" component={ PostsSearchContainer } onEnter={_ensureLoggedIn} />
       </Router>
     </Provider>
   );
