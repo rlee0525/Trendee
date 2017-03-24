@@ -9,7 +9,7 @@ class Splash extends React.Component {
           <p>Set and discover the</p><p id="splash-title">trend.</p>
         </div>
         <img id="splash-img"
-             src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,w_1864/v1490159250/splash_b6w94i.png" />
+             src="http://res.cloudinary.com/rlee0525/image/upload/v1490341700/Slice-min_thmg9g.png" />
         <SessionFormContainer />
       </div>
     )
