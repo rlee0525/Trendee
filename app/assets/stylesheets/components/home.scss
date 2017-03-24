@@ -1,6 +1,20 @@
 .home-main-container {
-  padding-top: 70px;
+  padding-top: 80px;
   margin: 0 17vw;
+
+  #home-title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: $teal;
+
+    #home-title-2 {
+      color: black;
+      padding-left: 10px;
+    }
+  }
 }
 
 .slider-body {

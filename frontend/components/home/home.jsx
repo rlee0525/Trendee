@@ -21,6 +21,7 @@ class Home extends React.Component {
         <MainNavBar />
 
         <div className="home-main-container">
+          <p id="home-title">Discover<p id="home-title-2"> the next trend.</p></p>
           <MainSearch />
 
           <div className="slider-body">
@@ -42,4 +43,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default withRouter(Home);
