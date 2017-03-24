@@ -3,6 +3,8 @@ import { Link, withRouter, hashHistory } from 'react-router';
 import Loading from '../loading/loading';
 import MainNavBar from '../main_navbar/main_navbar_container';
 import MainSearch from '../main_search/main_search_container';
+import PostsList from './posts_list';
+import Footer from '../footer/footer';
 
 class PostsSearch extends React.Component {
   constructor(props) {
