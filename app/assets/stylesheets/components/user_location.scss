@@ -1,8 +1,9 @@
 .user-location-main {
+  display: flex;
+  justify-content: center;
 
   p {
     padding-top: 20px;
-    text-align: center;
     color: gray;
   }
 
