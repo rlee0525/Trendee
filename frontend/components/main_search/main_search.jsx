@@ -92,6 +92,25 @@ class MainSearch extends React.Component {
             </div>
           </div>
         </div>
+
+        <div className="responsive-search-container">
+          <div className="search-container">
+            <div className="search-title">
+              <p>Category</p>
+            </div>
+            <div className="search-input">
+              <p className="search-bar" onClick={this.handleCategories}>
+                {this.state.subcategory}
+              </p>
+            </div>
+            {this.state.isOpened &&
+              <Categories handleClickCategory={this.handleClickCategory}
+                          handleClickOutside={this.handleClickOutside} />}
+          </div>
+          <div className="search-button">
+            <button>Search</button>
+          </div>
+        </div>
       </div>
     );
   }

@@ -11,6 +11,7 @@
   background: white;
   -webkit-font-smoothing: antialiased;
   border-bottom: 1px solid #ddd;
+  min-width: 375px;
 
   .nav-left, .nav-right {
     display: flex;

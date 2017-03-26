@@ -21,22 +21,40 @@
 }
 
 // Home page
-@media screen and (max-width: 1033px) {
-  .home-main-container {
-    margin: 0 5vw !important;
-  }
-
-  .responsive-search-bar {
+@media screen and (min-width: 850px) {
+  .responsive-search-container {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 1033px) {
+  .home-main-container {
+    margin: 0 10vw !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .search-bar-container {
     box-shadow: none;
   }
 
   .search-bar-section {
+    display: none !important;
+  }
+
+  .responsive-search-container {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #home-title-2 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .responsive-search-container {
     display: none !important;
   }
 }
