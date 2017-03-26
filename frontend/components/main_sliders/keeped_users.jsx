@@ -11,9 +11,9 @@ class KeepedUsersSlider extends React.Component {
     return (
       <div {...this.props} className="next-arrow">
         <FontAwesome
-          className='fa-chevron-right'
-          name='chevron-right'
-          id='fa-chevron-right' />
+          className='fa-angle-right'
+          name='angle-right'
+          id='fa-angle-right' />
       </div>
     );
   }
@@ -22,9 +22,9 @@ class KeepedUsersSlider extends React.Component {
     return (
       <div {...this.props} className="prev-arrow">
         <FontAwesome
-          className='fa-chevron-left'
-          name='chevron-left'
-          id='fa-chevron-left' />
+          className='fa-angle-left'
+          name='angle-left'
+          id='fa-angle-left' />
       </div>
     );
   }
