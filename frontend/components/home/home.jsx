@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import MainNavBar from '../main_navbar/main_navbar_container';
 import MainSearch from '../main_search/main_search_container';
+import UserLocation from '../user_location/user_location';
 import FeaturedSlider from '../main_sliders/featured_slider';
 import KeepedUsersSlider from '../main_sliders/keeped_users';
 import CategoryOneSlider from '../main_sliders/category_one';
@@ -23,6 +24,7 @@ class Home extends React.Component {
         <div className="home-main-container">
           <p id="home-title">Discover<p id="home-title-2"> the next trend.</p></p>
           <MainSearch />
+          <UserLocation />
 
           <div className="slider-body">
             <div className="slider-main">
