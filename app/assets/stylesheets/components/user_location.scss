@@ -1,8 +1,11 @@
 .user-location-main {
-  padding-top: 20px;
-  text-align: center;
-  color: gray;
 
+  p {
+    padding-top: 20px;
+    text-align: center;
+    color: gray;
+  }
+  
   p:hover {
     cursor: pointer;
     color: $light-pink;
