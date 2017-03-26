@@ -35,6 +35,7 @@ class UserLocation extends React.Component {
     return (
       <div className="user-location-main">
         <p onClick={this.openModal}>{this.state.address}</p>
+        
         <Modal
           className="maps-modal"
           isOpen={this.state.modalOpen}
