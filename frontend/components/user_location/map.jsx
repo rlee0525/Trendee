@@ -1,6 +1,118 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+let style = { retro: [
+    {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+    {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+    {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+    {
+      featureType: 'administrative',
+      elementType: 'geometry.stroke',
+      stylers: [{color: '#c9b2a6'}]
+    },
+    {
+      featureType: 'administrative.land_parcel',
+      elementType: 'geometry.stroke',
+      stylers: [{color: '#dcd2be'}]
+    },
+    {
+      featureType: 'administrative.land_parcel',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#ae9e90'}]
+    },
+    {
+      featureType: 'landscape.natural',
+      elementType: 'geometry',
+      stylers: [{color: '#dfd2ae'}]
+    },
+    {
+      featureType: 'poi',
+      elementType: 'geometry',
+      stylers: [{color: '#dfd2ae'}]
+    },
+    {
+      featureType: 'poi',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#93817c'}]
+    },
+    {
+      featureType: 'poi.park',
+      elementType: 'geometry.fill',
+      stylers: [{color: '#a5b076'}]
+    },
+    {
+      featureType: 'poi.park',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#447530'}]
+    },
+    {
+      featureType: 'road',
+      elementType: 'geometry',
+      stylers: [{color: '#f5f1e6'}]
+    },
+    {
+      featureType: 'road.arterial',
+      elementType: 'geometry',
+      stylers: [{color: '#fdfcf8'}]
+    },
+    {
+      featureType: 'road.highway',
+      elementType: 'geometry',
+      stylers: [{color: '#f8c967'}]
+    },
+    {
+      featureType: 'road.highway',
+      elementType: 'geometry.stroke',
+      stylers: [{color: '#e9bc62'}]
+    },
+    {
+      featureType: 'road.highway.controlled_access',
+      elementType: 'geometry',
+      stylers: [{color: '#e98d58'}]
+    },
+    {
+      featureType: 'road.highway.controlled_access',
+      elementType: 'geometry.stroke',
+      stylers: [{color: '#db8555'}]
+    },
+    {
+      featureType: 'road.local',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#806b63'}]
+    },
+    {
+      featureType: 'transit.line',
+      elementType: 'geometry',
+      stylers: [{color: '#dfd2ae'}]
+    },
+    {
+      featureType: 'transit.line',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#8f7d77'}]
+    },
+    {
+      featureType: 'transit.line',
+      elementType: 'labels.text.stroke',
+      stylers: [{color: '#ebe3cd'}]
+    },
+    {
+      featureType: 'transit.station',
+      elementType: 'geometry',
+      stylers: [{color: '#dfd2ae'}]
+    },
+    {
+      featureType: 'water',
+      elementType: 'geometry.fill',
+      stylers: [{color: '#b9d3c2'}]
+    },
+    {
+      featureType: 'water',
+      elementType: 'labels.text.fill',
+      stylers: [{color: '#92998d'}]
+    }
+  ]
+};
+
 // has access to this.props.businessesPositions & this.props.center
 class MapItem extends React.Component {
   constructor(props) {
@@ -9,37 +121,19 @@ class MapItem extends React.Component {
   }
 
   componentDidMount() {
-    const map = ReactDOM.findDOMNode(this.refs.map);
+    const map = this.refs.map;
     const options = {
       center: this.props.center,
       zoom: 12
     };
 
     this.map = new google.maps.Map(map, options);
+    this.map.setOptions({styles: style['retro']});
   }
-
-  // addBusiness(business) {
-  //   const pos = new google.maps.LatLng(business.lat, business.long);
-  //   const marker = new google.maps.Marker({
-  //     position: pos,
-  //     map: this.map
-  //   });
-  //
-  //   // creating window that will appear when clicked on
-  //   const windowString = `<h1 id="map-window">${business.name}</h1>`;
-  //   const window = new google.maps.InfoWindow({
-  //     content: windowString,
-  //     maxWidth: 200
-  //   });
-  //
-  //   marker.addListener('click', () => {
-  //     window.open(this.map, marker);
-  //   });
-  // }
 
   render() {
     return (
-      <div className="col col-1-3">
+      <div className="map-container">
         <div ref="map" id="google-map" />
       </div>
     );
