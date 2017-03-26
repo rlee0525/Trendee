@@ -14,10 +14,10 @@
 
 .maps-modal {
   position: fixed;
-  top: calc(50% - 25vh);
+  top: calc(50% - 35vh);
   left: calc(50% - 35vw);
   width: 70vw;
-  height: 50vh;
+  height: 70vh;
   border: 3px solid $dark-foggy;
   border-radius: 15px;
   background-color: $light-gray;
@@ -26,6 +26,6 @@
 #google-map {
   box-sizing: border-box;
   width: calc(70vw - 1px);
-  height: calc(50vh - 1px);
+  height: calc(70vh - 1px);
   border-radius: 15px;
 }
