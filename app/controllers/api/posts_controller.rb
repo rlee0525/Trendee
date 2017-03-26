@@ -39,15 +39,15 @@ class Api::PostsController < ApplicationController
     render json: @post
   end
 
-  def search
-    if params[:query]
-      @posts = Post.all.where("LOWER(title) ~ LOWER(?)", params[:query])
-    else
-      @posts = Post.none
-    end
-
-    render :search
-  end
+  # def search
+  #   if params[:query]
+  #     @posts = Post.all.where("LOWER(title) ~ LOWER(?)", params[:query])
+  #   else
+  #     @posts = Post.none
+  #   end
+  #
+  #   render :search
+  # end
 
   private
 

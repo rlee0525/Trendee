@@ -1,3 +1,4 @@
+// Splash page
 @media screen and (max-width: 1120px) {
   #splash-img {
     display: none !important;
@@ -15,6 +16,27 @@
 
 @media screen and (max-height: 500px) {
   #splash-logo {
+    display: none !important;
+  }
+}
+
+// Home page
+@media screen and (max-width: 1033px) {
+  .home-main-container {
+    margin: 0 5vw !important;
+  }
+
+  .responsive-search-bar {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .search-bar-container {
+    box-shadow: none;
+  }
+
+  .search-bar-section {
     display: none !important;
   }
 }
