@@ -5,9 +5,14 @@
     text-align: center;
     color: gray;
   }
-  
+
   p:hover {
     cursor: pointer;
     color: $light-pink;
   }
+}
+
+#google-map {
+  width: 400px;
+  height: 400px;
 }

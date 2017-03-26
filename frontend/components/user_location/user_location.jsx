@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import MapItem from './map';
 
 class UserLocation extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class UserLocation extends React.Component {
           onRequestClose={this.closeModal}
           contentLabel="maps-modal">
           <div className="maps-modal-text">
-            This is where Google Maps will go.
+            <MapItem center={{lat: 37.7758, lng: -122.435}} />
           </div>
         </Modal>
       </div>
