@@ -40,9 +40,7 @@ class UserLocation extends React.Component {
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           contentLabel="maps-modal">
-          <div className="maps-modal-text">
-            <MapItem center={{lat: 37.7758, lng: -122.435}} />
-          </div>
+          <MapItem center={{lat: 37.7758, lng: -122.435}} />
         </Modal>
       </div>
     )

@@ -12,7 +12,20 @@
   }
 }
 
+.maps-modal {
+  position: fixed;
+  top: calc(50% - 25vh);
+  left: calc(50% - 35vw);
+  width: 70vw;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: $light-gray;
+  box-shadow: 5px 5px gray;
+}
+
 #google-map {
-  width: 400px;
-  height: 400px;
+  width: 70vw;
+  height: 50vh;
+  border-radius: 15px;
 }
