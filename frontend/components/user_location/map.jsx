@@ -29,16 +29,12 @@ class MapItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      center: { lat: 37.7758, lng: -122.435 },
-      place: "San Francisco, CA"
-    }
   }
 
   componentDidMount() {
     const map = this.refs.map;
     const options = {
-      center: this.state.center,
+      center: this.props.center,
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
     };
@@ -48,24 +44,29 @@ class MapItem extends React.Component {
       types: ['(cities)']
     };
 
+    let button = document.getElementById('pac-button');
+
     this.map = new google.maps.Map(map, options);
     this.map.setOptions({styles: style['pastel']});
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(button);
 
     let autocomplete = new google.maps.places.Autocomplete(input, opts);
 
     autocomplete.addListener('place_changed', () => {
-      let place = autocomplete.getPlace().formatted_address;
-      this.map.setCenter(autocomplete.getPlace().geometry.location);
-      this.setState({ place });
+      // let place = autocomplete.getPlace().formatted_address;
+      let place = autocomplete.getPlace().address_components[0].short_name + ", " + autocomplete.getPlace().address_components[2].short_name;
+      let center = autocomplete.getPlace().geometry.location;
+      this.map.setCenter(center);
+      this.props.setAddress(place, center);
     });
-
   }
 
   render() {
     return (
       <div className="map-container">
         <input id="pac-input" className="controls" type="text" placeholder="Select a city to find its trend!" />
+        <button id="pac-button" onClick={this.props.closeModal}>Discover</button>
         <div ref="map" id="google-map" />
       </div>
     );
