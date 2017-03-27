@@ -35,13 +35,13 @@ class UserLocation extends React.Component {
     return (
       <div className="user-location-main">
         <p onClick={this.openModal}>{this.state.address}</p>
-        
+
         <Modal
           className="maps-modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           contentLabel="maps-modal">
-          <MapItem center={{lat: 37.7758, lng: -122.435}} />
+          <MapItem />
         </Modal>
       </div>
     )

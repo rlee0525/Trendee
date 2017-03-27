@@ -22,7 +22,7 @@ class Home extends React.Component {
         <MainNavBar />
 
         <div className="home-main-container">
-          <p id="home-title">Discover<p id="home-title-2"> the next trend.</p></p>
+          <span id="home-title">Discover<p id="home-title-2"> the next trend.</p></span>
           <MainSearch />
           <UserLocation />
 

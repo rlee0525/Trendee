@@ -25,22 +25,26 @@
   height: 70vh;
   border: 1px solid $dark-foggy;
   border-radius: 10px;
+
+  .map-container {
+    
+    #pac-input {
+      margin-top: 9px;
+      margin-left: 10px;
+      padding-left: 10px;
+      width: 35vw;
+      height: 25px;
+    }
+
+    #google-map {
+      box-sizing: border-box;
+      width: calc(70vw - 1px);
+      height: calc(70vh - 1px);
+      border-radius: 10px;
+    }
+  }
 }
 
-#autocomplete-input {
-  margin-top: 9px;
-  margin-left: 10px;
-  padding-left: 10px;
-  width: 35vw;
-  height: 25px;
-}
-
-#google-map {
-  box-sizing: border-box;
-  width: calc(70vw - 1px);
-  height: calc(70vh - 1px);
-  border-radius: 10px;
-}
 
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.75) !important;
