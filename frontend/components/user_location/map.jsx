@@ -78,7 +78,7 @@ class MapItem extends React.Component {
       <div className="map-container">
         <div id="pac-container">
           <input id="pac-input" className="controls" type="text" placeholder="Select a city to find its trend!" />
-          <button id="pac-button" onClick={this.props.closeModal}>Discover</button>
+          <button id="pac-button" onClick={this.props.closeModal}>Select</button>
         </div>
         <div ref="map" id="google-map" />
       </div>
