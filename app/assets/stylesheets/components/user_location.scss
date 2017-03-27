@@ -27,6 +27,14 @@
   border-radius: 10px;
 }
 
+#autocomplete-input {
+  margin-top: 9px;
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 35vw;
+  height: 25px;
+}
+
 #google-map {
   box-sizing: border-box;
   width: calc(70vw - 1px);

@@ -25,7 +25,6 @@ let style = { pastel:
   ]
 };
 
-// has access to this.props.businessesPositions & this.props.center
 class MapItem extends React.Component {
   constructor(props) {
     super(props);
@@ -39,13 +38,22 @@ class MapItem extends React.Component {
       zoom: 13
     };
 
+    let input = document.getElementById('autocomplete-input');
+    let searchBox = new google.maps.places.SearchBox(input);
+
     this.map = new google.maps.Map(map, options);
     this.map.setOptions({styles: style['pastel']});
+
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    this.map.addListener('bounds_changed', function() {
+      searchBox.setBounds(map.getBounds());
+    });
   }
 
   render() {
     return (
       <div className="map-container">
+        <input id="autocomplete-input" class="controls" type="text" placeholder="Search Location" />
         <div ref="map" id="google-map" />
       </div>
     );
