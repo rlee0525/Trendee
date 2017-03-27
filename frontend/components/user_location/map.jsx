@@ -45,18 +45,29 @@ class MapItem extends React.Component {
     };
 
     let button = document.getElementById('pac-button');
+    let container = document.getElementById('pac-container');
 
     this.map = new google.maps.Map(map, options);
     this.map.setOptions({styles: style['pastel']});
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(button);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(container);
+
+    google.maps.event.addListenerOnce(this.map, 'idle', function() {
+      container.style.display = "inline-block";
+    });
 
     let autocomplete = new google.maps.places.Autocomplete(input, opts);
 
     autocomplete.addListener('place_changed', () => {
-      // let place = autocomplete.getPlace().formatted_address;
-      let place = autocomplete.getPlace().address_components[0].short_name + ", " + autocomplete.getPlace().address_components[2].short_name;
+      let place = autocomplete.getPlace();
+
+      if (place.formatted_address.includes("USA")) {
+        place = place.address_components[0].short_name + ", " + autocomplete.getPlace().address_components[2].short_name;
+      } else {
+        place = place.formatted_address;
+      }
+
       let center = autocomplete.getPlace().geometry.location;
+
       this.map.setCenter(center);
       this.props.setAddress(place, center);
     });
@@ -65,8 +76,10 @@ class MapItem extends React.Component {
   render() {
     return (
       <div className="map-container">
-        <input id="pac-input" className="controls" type="text" placeholder="Select a city to find its trend!" />
-        <button id="pac-button" onClick={this.props.closeModal}>Discover</button>
+        <div id="pac-container">
+          <input id="pac-input" className="controls" type="text" placeholder="Select a city to find its trend!" />
+          <button id="pac-button" onClick={this.props.closeModal}>Discover</button>
+        </div>
         <div ref="map" id="google-map" />
       </div>
     );
