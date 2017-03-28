@@ -35,7 +35,7 @@ class MapItem extends React.Component {
     const map = this.refs.map;
     const options = {
       center: this.props.center,
-      zoom: 13,
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
     };
 
@@ -55,9 +55,23 @@ class MapItem extends React.Component {
       container.style.display = "inline-block";
     });
 
+    let circle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: this.map,
+            center: this.props.center,
+            radius: 7000
+          });
+
     let autocomplete = new google.maps.places.Autocomplete(input, opts);
 
     autocomplete.addListener('place_changed', () => {
+      circle.setMap(null);
+      this.map.setMapOnAll(null);
+
       let place = autocomplete.getPlace();
 
       if (place.formatted_address.includes("USA")) {
@@ -67,6 +81,17 @@ class MapItem extends React.Component {
       }
 
       let center = autocomplete.getPlace().geometry.location;
+
+      let cityCircle = new google.maps.Circle({
+              strokeColor: '#FF0000',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#FF0000',
+              fillOpacity: 0.35,
+              map: this.map,
+              center: center,
+              radius: 7000
+            });
 
       this.map.setCenter(center);
       this.props.setAddress(place, center);
