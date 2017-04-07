@@ -37,11 +37,10 @@ class Footer extends React.Component {
               </ul>
             </div>
             <div className="footer-vertical-menu">
-              <p className="menu-header-footer">Hosting</p>
+              <p className="menu-header-footer">Set</p>
               <ul>
-                <li>Why Host</li>
-                <li>Hospitality</li>
-                <li>Hosting</li>
+                <li>Why Post</li>
+                <li>Setting the Trend</li>
               </ul>
             </div>
           </div>
